@@ -169,7 +169,6 @@ public class MonitoringFragment extends Fragment implements MonitoringContract.V
                 });
                 // Set chronometer
                 chronometer.setBase(mService.getStartTime());
-                chronometer.setVisibility(View.VISIBLE);
                 chronometer.start();
             }
 
@@ -245,7 +244,7 @@ public class MonitoringFragment extends Fragment implements MonitoringContract.V
     }
 
     @Override
-    public void startMonitoringService(MonitoringSettings ms) {
+    public void startMonitoringgService(MonitoringSettings ms) {
         // Start service
         Intent intent = new Intent(getActivity(), MonitoringService.class);
         intent.setAction(MonitoringService.START_ACTION);
